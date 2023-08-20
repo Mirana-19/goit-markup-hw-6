@@ -72,8 +72,22 @@ svg {
 
 .container {
   margin: 0 auto;
-  width: 1158px;
-  padding: 0 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-width: 320px;
+  max-width: 428px;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 /* List, Link, Title */
@@ -106,6 +120,11 @@ svg {
   letter-spacing: 0.02em;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .footer-title {
+    text-align: center;
+  }
+}
 /* Section */
 
 .section-title {
@@ -136,9 +155,12 @@ svg {
   transition: color var(--time) var(--cubic);
 }
 
-.logo-footer {
+@media only screen and (max-width: 767.98px) {
+  .logo-footer {
+    display: block;
+    text-align: center;
+  }
 }
-
 .logo-header {
 }
 
@@ -448,12 +470,32 @@ svg {
 .team-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: var(--heading-margin);
-  gap: var(--item-gap);
+}
+
+@media only screen and (max-width: 767.98px) {
+  .team-list {
+    flex-basis: 100%;
+    row-gap: 72px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .team-list {
+    flex-basis: calc((100% - 24px) / 2);
+    row-gap: 64px;
+    column-gap: var(--item-gap);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .team-list {
+    flex-basis: calc((100% - 72px) / 4);
+    gap: var(--item-gap);
+  }
 }
 
 .team-list-item {
-  flex-basis: calc((100% - 72px) / 4);
   background-color: var(--white-color);
 
   border-radius: 0px 0px 4px 4px;
@@ -546,32 +588,66 @@ svg {
 */
 
 .footer {
-  padding: 100px 0;
+  padding-top: 96px;
+  padding-bottom: 96px;
+
   background-color: var(--hero-bg-color);
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
 }
 
 .footer-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
 }
 
-.footer-logo-container {
-  margin-right: 120px;
+@media only screen and (max-width: 767.98px) {
+  .footer-container {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .footer-container {
+    column-gap: 24px;
+    row-gap: 72px;
+    padding-left: 107px;
+    padding-right: 107px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-logo-container {
+    margin-right: 120px;
+  }
+
+  .footer-socials-container {
+    margin-right: 80px;
+  }
 }
 
 .footer-text {
   margin-top: 16px;
-  width: 264px;
+  width: 268px;
   color: var(--light-color);
 }
 
-.footer-socials-container {
-  margin-right: 80px;
+@media only screen and (min-width: 768px) {
+  .footer-text {
+    width: 264px;
+  }
 }
 
 .socials-footer {
-  margin-top: 16px;
+  display: flex;
   gap: 16px;
+
+  margin-top: 16px;
 }
 
 .socials-footer .socials-list-link:hover,
@@ -582,16 +658,28 @@ svg {
 .subscribe-form-container {
 }
 
+@media only screen and (max-width: 767.98px) {
+  .footer-socials-container,
+  .subscribe-form-container {
+    margin-top: 72px;
+  }
+}
+
 .subscribe-form {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 16px;
-  gap: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .subscribe-form {
+    gap: 24px;
+  }
 }
 .subscribe-form-label {
 }
 .subscribe-form-input {
   height: 40px;
-  width: 264px;
 
   padding: 8px 16px;
 
@@ -609,6 +697,20 @@ svg {
   transition: border-color var(--time) var(--cubic);
 }
 
+@media only screen and (max-width: 767.98px) {
+  .subscribe-form-label,
+  .subscribe-form-input {
+    width: 100%;
+    min-width: 290px;
+    max-width: 398px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .subscribe-form-input {
+    width: 264px;
+  }
+}
 .subscribe-form-input:focus {
   border-color: var(--primary-brand-color);
   width: 264px;
@@ -633,6 +735,14 @@ svg {
   min-width: 165px;
 
   border-radius: 4px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .subscribe-form-btn {
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .subscribe-form-btn-icon {
