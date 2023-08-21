@@ -850,6 +850,7 @@ nav .current-link::after {
 }
 
 .subscribe-form-container {
+  width: 100%;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -862,6 +863,7 @@ nav .current-link::after {
 .subscribe-form {
   display: flex;
   flex-wrap: wrap;
+
   margin-top: 16px;
 }
 
@@ -892,13 +894,16 @@ nav .current-link::after {
 }
 
 @media only screen and (max-width: 767.98px) {
-  .subscribe-form-label,
-  .subscribe-form-input {
+  .subscribe-form-label {
     width: 100%;
-    min-width: 290px;
+    max-width: 398px;
   }
 }
-
+@media only screen and (max-width: 767.98px) {
+  .subscribe-form-input {
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 768px) {
   .subscribe-form-input {
     width: 264px;
@@ -906,7 +911,6 @@ nav .current-link::after {
 }
 .subscribe-form-input:focus {
   border-color: var(--primary-brand-color);
-  width: 264px;
 }
 
 .subscribe-form-input::placeholder {
@@ -1207,7 +1211,7 @@ input:checked + .modal-form-label .custom-checkbox {
   margin: var(--margin-auto);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   min-width: 320px;
   max-width: 428px;
   min-height: 100vh;
@@ -1254,7 +1258,8 @@ input:checked + .modal-form-label .custom-checkbox {
 
 .mob-menu-address {
   margin-top: auto;
-  align-self: center;
+
+  font-style: normal;
 }
 
 .mob-menu-address-item {
