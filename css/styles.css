@@ -849,8 +849,10 @@ nav .current-link::after {
   background-color: var(--green-color);
 }
 
-.subscribe-form-container {
-  width: 100%;
+@media only screen and (max-width: 767.98px) {
+  .subscribe-form-container {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 767.98px) {
