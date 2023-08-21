@@ -170,8 +170,6 @@ svg {
     text-align: center;
   }
 }
-.logo-header {
-}
 
 .logo:hover,
 .logo:focus {
@@ -344,6 +342,12 @@ nav .current-link::after {
 @media only screen and (min-width: 768px) {
   .logo-header {
     margin-right: 120px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .logo-header {
+    margin-right: 76px;
   }
 }
 
