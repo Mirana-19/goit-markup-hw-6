@@ -403,6 +403,10 @@ nav .current-link::after {
     display: flex;
     padding: 24px 0;
   }
+
+  .address-list-item:first-child {
+    margin-right: 40px;
+  }
 }
 .address-list-link:hover,
 .address-list-link:focus {
